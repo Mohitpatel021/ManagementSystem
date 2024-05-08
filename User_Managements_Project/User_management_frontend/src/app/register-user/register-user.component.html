@@ -1,0 +1,41 @@
+<div class="page">
+    <div class="container">
+        <div class="left">
+            <div class="login">Registration</div>
+            <div class="eula">By registering you agree to the ridiculously long terms that you didn't bother to read
+            </div>
+        </div>
+        <div class="right">
+            <div class="form">
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" [(ngModel)]="users.username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" [(ngModel)]="users.name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email:</label>
+                        <input type="email" id="email" name="email" [(ngModel)]="users.email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">PhoneNumber:</label>
+                        <input type="phone" id="phone" name="phone" [(ngModel)]="users.phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" [(ngModel)]="users.password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City:</label>
+                        <input type="city" id="city" name="city" [(ngModel)]="users.city" required>
+                    </div>
+                    <input type="submit" id="submit" value="Register">
+                    <button id="btn" routerLink="/login" routerLinkActive="Active" >Back To Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

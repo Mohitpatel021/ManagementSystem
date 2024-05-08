@@ -1,0 +1,41 @@
+<!-- employee-list.component.html -->
+
+<div class="container">
+    <div class="card left-card">
+        <span class="content"> Total Users: <br>
+            <span class="dynamic-content"> {{ totalUser}} </span>
+            <div class="logout-btn">
+                <button (click)="logout()" class="btn-success" >Logout</button>
+            </div>
+        </span>
+        <div class="card-body">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Phone</th>  
+                        <th>Email</th>
+                        <th>City</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.phone }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.city }}</td>
+                        <td>
+                            <button (click)="editUser(user.id)" class="btn-success ">Edit</button>
+                            <button (click)="deleteUser(user.id)" class="btn-danger ">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</div>
